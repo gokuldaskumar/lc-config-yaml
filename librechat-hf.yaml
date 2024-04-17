@@ -417,8 +417,8 @@ endpoints:
       models:
         default: [
           "databricks/dbrx-instruct",
-          "Austism/chronos-hermes-13b",
-          "DiscoResearch/DiscoLM-mixtral-8x7b-v2",
+          "mistralai/Mixtral-8x22B-Instruct-v0.1",
+          "microsoft/WizardLM-2-8x22B",
           "Gryphe/MythoMax-L2-13b",
           "lmsys/vicuna-13b-v1.5",
           "lmsys/vicuna-7b-v1.5",

@@ -162,9 +162,9 @@ Configuration used for the Railway one-click install template:
 - https://discord.com/invite/gpt4
 - Get API key on discord with the command `/key`
 
-#### HentAI
-- https://discord.com/invite/3ZaM7hcGyr
-- Get API key on discord with the command `/key`
+#### Hyzenberg
+- https://discord.gg/ECUEFQzATa
+- Get API key on discord with the command `/key get`
 
 #### Mandrill
 - https://discord.mandrillai.tech

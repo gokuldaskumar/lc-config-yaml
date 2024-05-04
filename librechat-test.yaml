@@ -1,6 +1,7 @@
-version: 1.0.5
+version: 1.0.8
 
 cache: true
+
 fileStrategy: "firebase"
 
 interface:
@@ -8,17 +9,44 @@ interface:
   privacyPolicy:
     externalUrl: 'https://librechat.ai/privacy-policy'
     openNewTab: true
-
   # Terms of service
   termsOfService:
     externalUrl: 'https://librechat.ai/tos'
     openNewTab: true
-
+    
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
-
+  
 endpoints:
   custom:
+    # APIpie
+    - name: "APIpie"
+      apiKey: "${APIPIE_API_KEY}"
+      baseURL: "https://apipie.ai/v1/"
+      # baseURL: "http://host.docker.internal:5000/v1"
+      models:
+        default: [
+          "gpt-4",
+          "gpt-4-turbo",
+          "gpt-3.5-turbo",
+          "claude-3-opus",
+          "claude-3-sonnet",
+          "claude-3-haiku",
+          "llama-3-70b-instruct",
+          "llama-3-8b-instruct",
+          "gemini-pro-1.5",
+          "gemini-pro",
+          "mistral-large",
+          "mistral-medium",
+          "mistral-small",
+          "mistral-tiny",
+          "mixtral-8x22b",
+          ]
+        fetch: false
+      titleConvo: true
+      titleModel: "gpt-3.5-turbo"
+      dropParams: ["stream"]
+
     # ChatGPT
     - name: "ChatGPT"
       apiKey: "anything"
@@ -29,6 +57,7 @@ endpoints:
           ]
         fetch: false
       titleConvo: true
+      titleModel: "gpt-3.5-turbo"
   
     # Coze
     - name: "Coze"
@@ -149,6 +178,9 @@ endpoints:
           "anthropic/claude-2.0:beta",
           "anthropic/claude-instant-1:beta",
           "------------------------------",
+          "meta-llama/llama-3-70b-instruct:nitro",
+          "meta-llama/llama-3-8b-instruct",
+          "meta-llama/llama-3-70b-instruct",
           "meta-llama/llama-2-13b-chat",
           "meta-llama/llama-2-70b-chat",
           "meta-llama/llama-2-70b-chat:nitro",
@@ -312,6 +344,9 @@ endpoints:
       summaryModel: "gpt-35-turbo"
       forcePrompt: false
       modelDisplayLabel: "DEEPNIGHT"
+      addParams:
+        stream: True
+      iconURL: "https://raw.githubusercontent.com/fuegovic/lc-config-yaml/main/icons/DEEPNIGHT.png"
 
     - name: "Anyscale"
       apiKey: "${ANYSCALE_API_KEY}"

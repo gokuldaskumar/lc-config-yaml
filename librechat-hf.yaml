@@ -32,6 +32,22 @@ endpoints:
       forcePrompt: false
       modelDisplayLabel: "nvidia"
 
+# Anyscale
+    - name: "hyperbolic"
+      apiKey: "user_provided"
+      baseURL: "https://api.hyperbolic.xyz/v1/chat/completions"
+      models:
+        default: [
+          "meta-llama/Meta-Llama-3.1-405B-Instruct"
+          ]
+        fetch: false
+      titleConvo: true
+      titleModel: "meta-llama/Meta-Llama-3.1-405B-Instruct"
+      summarize: false
+      summaryModel: meta-llama/Meta-Llama-3.1-405B-Instruct"
+      forcePrompt: false
+      modelDisplayLabel: "hyperbolic"
+      
     # APIpie
     - name: "APIpie"
       apiKey: "user_provided"
